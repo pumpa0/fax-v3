@@ -53,13 +53,10 @@ stats = `
 *› Runtime :* ${count(uptime)}
 *_Phone Stats_*
 *› Batterai:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Ｃｈａｒｇｉｎｇ' : '⚡ Discharging' }` : '_♻️Mengambil data_'}
-*› Penggunaan Ram :* ${ram2}
 *› Platform :* ${os.platform()}
 *› Hostname :* ${os.hostname()}
 *› Uptime :* ${count(os.uptime())}
 *› Wa Version:* ${conn.user.phone.wa_version}
-*› Os Version:* ${conn.user.phone.os_version}
-*› Device Model:* ${conn.user.phone.device_model}
 `
 conn.sendButtonLoc(m.chat, await ( await fetch('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWisuGQ2p4DQFvXa1eWhUhfu9lcyRxHXa1OQ&usqp=CAU')).buffer(),  stats, userbot.packname, 'Menu', 'menu', m)
    break;
@@ -219,14 +216,13 @@ before: `*${me}*
 *› Runtime:* ${count(uptime)}
 *› Uptime:* ${count(os.uptime())}
 *› Hostname:* ${os.hostname()}
-*› Total Fitur:* *${Object.keys(Events).length}* fitur
 
 *ｓｔａｔｕｓ ｎｏｗ:*
 *› Jam:* ${time}
 *› Kalender islam:* ${dateIslamic}
 *› Kalender Java:* ${week} ${weton} ${date}
 
-*› Github:*\nhttps://github.com/Arifirazzaq2001/RIXLE-BOT-V3`.trimStart(),
+*› Official Group:*\nhttps://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`.trimStart(),
 type: "*#type*\n",
 after: "\n"
 }
@@ -267,7 +263,7 @@ Gak boleh banding bandingin bot lain sama bot kami!
 
 Bot ini menggunakan prefix ${userbot.prefix}
 
-Note : jika Ada bug atau eror silahkan ketik
+Note : jika Ada bug atau error silahkan ketik
 ${userbot.prefix}report <apa yg di laporkan>
 `
 conn.sendButton(m.chat, capt, userbot.packname, 'Menu', 'menu', { quoted: m, contextInfo: {"mentionedJid": conn.parseMention(capt)}} )
@@ -317,11 +313,11 @@ break;
 
    case "creator":
 conarray = []
-ownerContact = ['6282334170916', '6282334170916', '6282334170916','6282334170916','6282334170916','6282334170916','6282334170916','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0']
+ownerContact = ['6285731855426', '6285731855426', '6285731855426','6285731855426','6285731855426','6285731855426','6285731855426','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0']
   for (let i of ownerContact.map(v => v + '@s.whatsapp.net')) {
  vname = conn.contacts[i] != undefined ? conn.contacts[i].vname || conn.contacts[i].notify : undefined
   conarray.push({
-"displayName": 'Fardan',
+"displayName": 'Han',
 "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `${conn.user.name}`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 })
 }
