@@ -21,9 +21,9 @@ global.antidelete = false
                  global.Public = false
                    global.scrap = require("./Lib/scrape");
 
-conn.version = [2, 2119, 6]
+conn.version = [2, 2143, 3]
 conn.logger.level = "warn"
-conn.browserDescription = ['R I X L E   B O T', 'EDGE', '94.0.992.50']
+conn.browserDescription = ['H A N B O T Z', 'EDGE', '94.0.992.50']
 
 if (fs.existsSync('./session.json')) conn.loadAuthInfo('./session.json')
 conn.on('qr', qr => {
